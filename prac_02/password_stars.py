@@ -1,4 +1,4 @@
-def main:
+def main():
 
     MINIMUM_LENGTH = 5
     password = input("Enter a password: ")
