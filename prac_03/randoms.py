@@ -23,4 +23,5 @@ import random
 
 # Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 
-random.randint
+print(random.randint(1,100))
+
