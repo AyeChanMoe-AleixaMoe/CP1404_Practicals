@@ -18,7 +18,7 @@ except ZeroDivisionError:
 print("Finished.")
 
 # When will a ValueError occur?
-# It happens when either the numerator or denominator is Zero.
+# It happens when either the numerator or denominator is not a number.
 
 # When will a ZeroDivisionError occur?
 # It happens when the denominator is zero
