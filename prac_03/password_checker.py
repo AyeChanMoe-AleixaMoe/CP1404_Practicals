@@ -15,7 +15,7 @@ def main():
     print(f"Your password must be between {MIN_LENGTH} and {MAX_LENGTH} characters, and contain:")
     print("\t1 or more uppercase characters")
     print("\t1 or more lowercase characters")
-    print("\t1 or more numbers")
+    print("\t1 or more numbers.txt")
     if IS_SPECIAL_CHARACTER_REQUIRED:
         print("\tand 1 or more special characters: ", SPECIAL_CHARACTERS)
     password = input("> ")

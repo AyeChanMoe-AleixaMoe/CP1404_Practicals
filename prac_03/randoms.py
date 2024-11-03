@@ -7,7 +7,7 @@ import random
 #The smallest number I have is 5 and the largest is 20
 
 # What did you see on line 2?
-# The code produces the numbers between 3 to 10 randomly in the step of 2. However, 10 cannot be produce as the step is 2.
+# The code produces the numbers.txt between 3 to 10 randomly in the step of 2. However, 10 cannot be produce as the step is 2.
 
 # What was the smallest number you could have seen, what was the largest?
 #The smallest number is 3 and the biggest is 9.
@@ -16,7 +16,7 @@ import random
 # No.
 
 # What did you see on line 3?
-# Random decimal numbers between 2.5 and 5.5.
+# Random decimal numbers.txt between 2.5 and 5.5.
 
 # What was the smallest number you could have seen, what was the largest?
 # Smallest number is 2.5 and the biggest is 5.5.
