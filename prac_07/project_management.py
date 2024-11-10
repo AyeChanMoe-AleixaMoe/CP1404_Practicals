@@ -1,4 +1,6 @@
 import csv
+from datetime import datetime
+
 from project import Project
 
 FILENAME = "projects.txt"
@@ -58,14 +60,25 @@ def save_projects(filename, projects):
 
 def display_projects(projects):
     """Display all projects."""
-    print("Projects:")
-    for project in projects:
+    incomplete = [project for project in projects if not project.is_complete()]
+    complete = [project for project in projects if project.is_complete()]
+    print("Incomplete projects:")
+    for project in sorted(incomplete):
+        print(f"  {project}")
+
+    print("Complete projects:")
+    for project in sorted(complete):
         print(f"  {project}")
 
 
 # Placeholder functions for other options in the menu
 def filter_projects_by_date(projects):
-
+    date_string = input("Show projects that start by date (dd/mm/yyyy): ")
+    filter_date = datetime.strptime(date_string, "%d/%m/%Y").date()
+    filtered_projects = [project for project in projects if project.start_date > filter_date]
+    print("Filtered projects:")
+    for project in sorted(filtered_projects, key=lambda project: project.start_date):
+        print(f"  {project}")
 
 
 def add_project(projects):
