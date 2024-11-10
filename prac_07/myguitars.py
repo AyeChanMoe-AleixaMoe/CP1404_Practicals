@@ -33,6 +33,7 @@ def load_file():
         reader = csv.reader(file)
         for row in reader:
             guitars.append(Guitar(row[0], int(row[1]), float(row[2])))
+        guitars.sort()
     return guitars
 
 if __name__ == '__main__':

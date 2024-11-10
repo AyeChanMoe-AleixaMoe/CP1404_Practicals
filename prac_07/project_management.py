@@ -1,3 +1,5 @@
+"""Estimated time - 30 minutes, Actual time - 1 hour"""
+
 import csv
 from datetime import datetime
 from project import Project
