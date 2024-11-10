@@ -3,7 +3,7 @@ import datetime
 class Project:
     def __init__(self, name, start_date, priority, cost_estimate, completion_percentage):
         self.name = name
-        self.start_date = datetime.datetime.strptime(start_date, '%d-%m-%Y').date()
+        self.start_date = datetime.datetime.strptime(start_date, '%d/%m/%Y').date()
         self.priority = int(priority)
         self.cost_estimate = float(cost_estimate)
         self.completion_percentage = int(completion_percentage)
@@ -16,6 +16,7 @@ class Project:
 
     def is_complete(self):
         return self.completion_percentage == 100
+
     def update(self, new_completion_percentage=None, new_priority=None):
         if new_completion_percentage is not None:
             self.completion_percentage = int(new_completion_percentage)
