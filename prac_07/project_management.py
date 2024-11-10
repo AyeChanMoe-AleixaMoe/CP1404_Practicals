@@ -82,11 +82,23 @@ def filter_projects_by_date(projects):
 
 
 def add_project(projects):
-
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yyyy): ")
+    priority = input("Priority: ")
+    cost_estimate = input("Cost estimate: ")
+    completion_percentage = input("Percent complete: ")
+    projects.append(Project(name, start_date, priority, cost_estimate, completion_percentage))
 
 
 def update_project(projects):
-
+    for i, project in enumerate(projects):
+        print(f"{i} {project}")
+    project_index = int(input("Project choice: "))
+    project = projects[project_index]
+    new_completion_percentage = input("New Percentage (leave blank to keep current): ")
+    new_priority = input("New Priority (leave blank to keep current): ")
+    project.update(new_completion_percentage or None, new_priority or None)
 
 
 if __name__ == "__main__":
