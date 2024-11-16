@@ -1,0 +1,47 @@
+# shopping_layout.kv
+
+<MainLayout>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    # Product buttons
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 5
+
+        Button:
+            text: "Cheese $12.50"
+            on_press: app.add_to_total(12.50)
+
+        Button:
+            text: "Laptop $912.95"
+            on_press: app.add_to_total(912.95)
+
+        Button:
+            text: "Plant $4.75"
+            on_press: app.add_to_total(4.75)
+
+        Button:
+            text: "Coffee Machine $2,300.00"
+            on_press: app.add_to_total(2300.00)
+
+        Button:
+            text: "Guitar $4,399.95"
+            on_press: app.add_to_total(4399.95)
+
+    # Box for displaying total price and reset button
+    BoxLayout:
+        size_hint_y: None
+        height: 50
+        spacing: 5
+
+        # Label for total price
+        Label:
+            text: "Total price: $" + "{:.2f}".format(app.total_price)
+            font_size: 20
+
+        # Reset button
+        Button:
+            text: "Reset"
+            on_press: app.reset_total
