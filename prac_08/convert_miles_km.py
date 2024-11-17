@@ -12,6 +12,7 @@ class ConvertMilesToKm(App):
         self.message = "Convert miles to km"
         return self.root
     def handle_update(self):
+        """Handle the conversion of miles to kilometers."""
         try:
             miles = float(self.root.ids.user_input.text)
             kilometer = miles * MILES_TO_KM_CONVERSION_RATE
@@ -20,6 +21,7 @@ class ConvertMilesToKm(App):
             self.root.ids.user_input.text = "0"
             self.handle_update()
     def handle_increment(self, increment):
+        """Handle increment or decrement of miles."""
         try:
             miles = float(self.root.ids.user_input.text) if self.root.ids.user_input.text else 0.0
             miles += increment
